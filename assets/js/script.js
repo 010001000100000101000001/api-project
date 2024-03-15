@@ -8,12 +8,14 @@ document.getElementById("submit").addEventListener("click", e => postForm(e));
 async function postForm(e) {
     const form = new FormData(document.getElementById("checksform"));
 
-    const response = fetch("https://ci-jshint.herokuapp.com/api", {
-        method: "POST",
-        headers: {
-                    "Authorization": API_KEY,
-                 }
-        })
+    const response = await fetch(API_URL, {
+                                method: "POST",
+                                headers: {
+                                        "Authorization": API_KEY,
+                                        
+                                        body: form,
+        }
+    })
 }
 
 async function getStatus(e) {
