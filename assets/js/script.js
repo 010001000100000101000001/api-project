@@ -12,10 +12,10 @@ async function postForm(e) {
                                 method: "POST",
                                 headers: {
                                         "Authorization": API_KEY,
-                                        
-                                        body: form,
-        }
-    })
+
+        },
+                                body: form,
+    });
 }
 
 async function getStatus(e) {
